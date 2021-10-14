@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhe</title>
+</head>
+<body>
+
+<h2>Detalhe do Desenho<h2>
+    <main id="corpo-detalhe"> 
+        <section class="detalhe-desenho">
+            
+            
+        
+        <ul>       
+                        
+            <li>Nome:<%= desenho.nome %></li>
+            <li>Ano:<%= desenho.ano %></li> 
+              
+            <li>Personagens:<%= desenho.personagens %></li>
+            <li>Criador:<%= desenho.criador %></li>       
+             
+            <li>Emissora:<%= desenho.emissoras %></li>
+            <li>Sinopse:<%= desenho.sinopse %></li>
+
+            <img src="<%= desenho.imagem %>" width="200" height="300">
+        </ul>           
+        
+        </section>
+        <a href="/criar">Criar</a>
+        <button><a href="/">Voltar</a></button>
+    </main>
+        
+</body>
+</html>

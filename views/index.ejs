@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Catalogo</title>
+</head>
+    <body>
+        <h2 id="desenho-antigo">DESENHOS ANTIGOS<h2>
+
+            <main id="corpo-principal">
+            
+                <form action="/detalhe" method="POST">
+
+                  <section id = "principal">
+                    <div>
+                        <% catalogo.forEach(function(item) { %>
+
+                        
+                            <div class = "desenho">
+                                <div>                                
+                                    <a href ="/detalhe/<%= item.id %>"><img src="<%= item.imagem %>" alt="imagem dino" width="200" height = "300px"</a>
+                                </div>
+                                
+                                <div>
+                                    <p>Nome:</p>                                                                                          
+                                    <p><%= item.nome %></p>
+                                    <p>Ano:</p>
+                                    <p><%= item.ano %></p>
+                                </div>
+                                <a href ="/editar/<%= item.id %>">EDITAR</a>
+                            </div>
+                        <% }) %>
+                    </div>
+
+                  </form>
+                  
+                </section>
+
+            </main>
+    </body>
+</html>
