@@ -102,15 +102,16 @@ app.use(express.urlencoded());
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => {
+
+
+app.get("/", (req, res) => {  
   res.render("index", {
     catalogo,
   });
 });
 
-app.get("/detalhe/:id", (req, res) => {
-  const id = parseInt(req.params.id); 
-  const desenho =  catalogo[id];
+app.get("/detalhe/:id", (req, res) => {  
+  const desenho =  parseInt(req.params.id);
   res.render("detalhe", {desenho});
 });
 
@@ -119,32 +120,30 @@ app.get("/criar", (req, res) =>{
 });
 
 app.post("/criar", (req, res) => {
-  const { imagem, nome, ano, personagens, criador, emissoras, sinopse } = req.body;  
-    res.redirect("/");
-  
+  const { imagem, nome, ano, personagens, criador, emissoras, sinopse } = req.body;
+    res.redirect("/");  
+    
 });
 
-app.get("/editar/:id", (req, res) => {
-  const desenho = parseInt(req.params.id)
-  res.render("editar")
- 
+app.get("/editar/:id", (req, res) => {  
+  const desenho = parseInt(req.params.id);
+  res.render("editar", {desenho}) 
 });
 
 app.post("/editar/:id", (req, res) => {
-
+  
   const { imagem, nome, ano, personagens, criador, emissoras, sinopse } = req.body;
+  
+  desenho.imagem = imagem;
+  desenho.nome = nome;
+  desenho.ano = ano;
+  desenho.personagens = personagens;
+  desenho.criador = criador;
+  desenho.emissoras = emissoras;
+  desenho.sinopse = sinopse;
 
-  // desenho.imagem = imagem;
-  // desenho.nome = nome;
-  // desenho.ano = ano;
-  // desenho.personagens = personagens;
-  // desenho.criador = criador;
-  // desenho.emissoras = emissoras;
-  // desenho.sinopse = sinopse;
-
-  res.render("editar", {
-    desenho,
-  })
+  res.render("editar")
+  
 });
 
 

@@ -12,7 +12,7 @@
 
             <main id="corpo-principal">
             
-                <form action="/detalhe" method="POST">
+               <a href="/criar">Criar Novo Desenho</a>
 
                   <section id = "principal">
                     <div>
@@ -25,12 +25,12 @@
                                 </div>
                                 
                                 <div>
-                                    <p>Nome:</p>                                                                                          
-                                    <p><%= item.nome %></p>
-                                    <p>Ano:</p>
-                                    <p><%= item.ano %></p>
+                                                                                                                             
+                                    <p>Nome:<%= item.nome %></p>                                    
+                                    <p>Ano:<%= item.ano %></p>
                                 </div>
                                 <a href ="/editar/<%= item.id %>">EDITAR</a>
+                                <a href ="/deletar/<%= item.id %>">DELETAR</a>
                             </div>
                         <% }) %>
                     </div>
