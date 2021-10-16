@@ -111,7 +111,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/detalhe/:id", (req, res) => {  
-  const desenho =  parseInt(req.params.id);
+  const desenho =  catalogo;
   res.render("detalhe", {desenho});
 });
 
@@ -121,6 +121,13 @@ app.get("/criar", (req, res) =>{
 
 app.post("/criar", (req, res) => {
   const { imagem, nome, ano, personagens, criador, emissoras, sinopse } = req.body;
+    imagem,
+    nome,
+    ano,
+    personagens,
+    criador,
+    emissoras,
+    sinopse,
     res.redirect("/");  
     
 });
@@ -142,28 +149,9 @@ app.post("/editar/:id", (req, res) => {
   desenho.emissoras = emissoras;
   desenho.sinopse = sinopse;
 
-  res.render("editar")
+  res.redirect("/")
   
 });
-
-
-
-// app.post("/inscrever", (req, res) => {
-//   const {nome, imagem, periodo, local, tamanho, alimentacao, descricao} = req.body;
-
-//   catalogo.push({
-//     nome,
-//     imagem,
-//     periodo,
-//     local,
-//     tamanho,
-//     alimentacao,
-//     descricao,
-//   });
-
-//   res.redirect("/");
-
-// });
 
 
 
