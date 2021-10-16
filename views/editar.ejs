@@ -6,46 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar</title>
 </head>
-<body>
 
+  <body>
     <h3>Editar Desenho</h3>
 
-    <section>
-        <form action = "/editar/ <%= desenho.id %>" method ="POST">
+    <nav>
+        <ul>
+            <li>
+                <a href="/">PAGINA INICIAL</a>
+            </li>
+        </ul>
+    </nav>
+
+    <% if(message != "") { %>
+    <section id="message">
+        <p><%= message %></p><span id="close">&times;</span>        
     </section>
-    <section>
-        <div>
-            <label for ="nome">Digite o NOME do desenho:</label>
-            <input type ="text" name ="nome" id="nome" placeholder="Digite o Nome" value="<%= desenho.nome%>" required>
-        </div>
-        <div>
-            <label for ="nome">Digite o ANO do desenho:</label>
-            <input type ="text" name ="ano" id="ano" placeholder="Digite o Ano" value="<%= desenho.ano%>" required>
-        </div>
-        <div>
-            <label for ="nome">Digite o PERSONAGEM do desenho:</label>
-            <input type ="text" name ="personagens" id="personagens" placeholder="Digite os Personagens" value="<%= desenho.personagens%>"required>
-        </div>
-        <div>
-            <label for ="nome">Digite o CRIADOR do desenho:</label>
-            <input type ="text" name ="criador" id="criador" placeholder="Digite o Criador" value="<%= desenho.criador%>" required>
-        </div>
-        <div>
-            <label for ="nome">Digite a EMISSORA do desenho:</label>
-            <input type ="text" name ="emissoras" id="emissoras" placeholder="Digite a Emissora" value="<%= desenho.emissoras%>" required>
-        </div>
-        <div>
-            <label for ="nome">Digite o SINOPSE do desenho:</label>
-            <input type ="text" name ="sinopse" id="sinopse" placeholder="Digite a Sinopse" value="<%= desenho.sinopse%>" required>
-        </div>
-        <div>
-            <label for ="nome">Coloque endereço da IMAGEM do desenho:</label>
-            <input type ="text" name ="imagem" id="imagem" placeholder="Endereço da Imagem" value="<%= desenho.imagem%>" required>
-        </div>
-        <div>
+    <%} %>
+
+    <% if(catalogo != null) { %>
+    <section id="edit">   
+
+    
+        <form action = "/editar/ <%= catalogo.id %>" method ="POST">
+    
+    
+            <div>
+                <label for ="nome">Digite o NOME do desenho:</label>
+                <input type ="text" name ="nome" id="nome" placeholder="Digite o Nome" value="<%= catalogo.nome %>" required>
+            </div>
+            <div>
+                <label for ="nome">Digite o ANO do desenho:</label>
+                <input type ="text" name ="ano" id="ano" placeholder="Digite o Ano" value="<%= catalogo.ano %>">
+            </div>
+            <div>
+                <label for ="nome">Digite o PERSONAGEM do desenho:</label>
+                <input type ="text" name ="personagens" id="personagens" placeholder="Digite os Personagens" value="<%= catalogo.personagens %>">
+            </div>
+            <div>
+                <label for ="nome">Digite o CRIADOR do desenho:</label>
+                <input type ="text" name ="criador" id="criador" placeholder="Digite o Criador" value="<%= catalogo.criador %>">
+            </div>
+            <div>
+                <label for ="nome">Digite a EMISSORA do desenho:</label>
+                <input type ="text" name ="emissoras" id="emissoras" placeholder="Digite a Emissora" value="<%= catalogo.emissoras %>">
+            </div>
+            <div>
+                <label for ="nome">Digite o SINOPSE do desenho:</label>
+                <input type ="text" name ="sinopse" id="sinopse" placeholder="Digite a Sinopse" value="<%= catalogo.sinopse %>">
+            </div>
+            <div>
+                <label for ="nome">Coloque endereço da IMAGEM do desenho:</label>
+                <input type ="text" name ="imagem" id="imagem" placeholder="Link da Imagem" value="<%= catalogo.imagem %>">
+            </div>
+        
             <button type="submit">EDITAR</button>
-        </div>
-    </form>
+        
+        </form>
     </section>
-</body>
+    <%} %>
+
+  </body>
 </html>

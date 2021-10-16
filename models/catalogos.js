@@ -1,7 +1,7 @@
 const database = require("./../database");
 const Sequelize = require("sequelize");
 
-const Desenho = database.define("catalogo", {
+const Catalogo = database.define("catalogos", {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
@@ -35,7 +35,7 @@ const Desenho = database.define("catalogo", {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  emissora: {
+  emissoras: {
     type: Sequelize.STRING,
     allowNull: false,
   },  
@@ -47,4 +47,4 @@ const Desenho = database.define("catalogo", {
   updatedAt: false,
 });
 
-module.exports = Desenho;
+module.exports = Catalogo;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>criar</title>
 </head>
-<body>
+  <body>
 
     <nav>
         <div>
@@ -20,43 +20,51 @@
         </div>
     </nav>
 
+    <% if(message != "") { %>
+        <section id="message">
+            <p><%= message %></p><span id="close">&times;</span>
+        </section>
+    <% } %>
+
     <section>
 
+        <form action = "/criar" method ="POST">
+    </section>
+        <section>
+            <div>
+                <label for ="nome">Digite o NOME do desenho:</label>
+                <input type ="text" name ="nome" id="nome" placeholder="Digite o Nome" required>
+            </div>
+            <div>
+                <label for ="nome">Digite o ANO do desenho:</label>
+                <input type ="text" name ="ano" id="ano" placeholder="Digite o Ano" required>
+            </div>
+            <div>
+                <label for ="nome">Digite o PERSONAGEM do desenho:</label>
+                <input type ="text" name ="personagens" id="personagens" placeholder="Digite os Personagens" required>
+            </div>
+            <div>
+                <label for ="nome">Digite o CRIADOR do desenho:</label>
+                <input type ="text" name ="criador" id="criador" placeholder="Digite o Criador" required>
+            </div>
+            <div>
+                <label for ="nome">Digite a EMISSORA do desenho:</label>
+                <input type ="text" name ="emissoras" id="emissoras" placeholder="Digite a Emissora" required>
+            </div>
+            <div>
+                <label for ="nome">Digite o SINOPSE do desenho:</label>
+                <input type ="text" name ="sinopse" id="sinopse" placeholder="Digite a Sinopse" required>
+            </div>
+            <div>
+                <label for ="nome">Coloque endereço da IMAGEM do desenho:</label>
+                <input type ="text" name ="imagem" id="imagem" placeholder="Link da Imagem" required>
+            </div>
+            <div>
+                <button type="submit">CRIAR</button>
+            </div>
+        </section>
+    </form>
 
-    <form action = "/criar" method ="POST"></form>
-</section>
-<section>
-    <div>
-        <label for ="nome">Digite o NOME do desenho:</label>
-        <input type ="text" name ="nome" id="nome" placeholder="Digite o Nome" required>
-    </div>
-    <div>
-        <label for ="nome">Digite o ANO do desenho:</label>
-        <input type ="text" name ="ano" id="ano" placeholder="Digite o Ano" required>
-    </div>
-    <div>
-        <label for ="nome">Digite o PERSONAGEM do desenho:</label>
-        <input type ="text" name ="personagens" id="personagens" placeholder="Digite os Personagens" required>
-    </div>
-    <div>
-        <label for ="nome">Digite o CRIADOR do desenho:</label>
-        <input type ="text" name ="criador" id="criador" placeholder="Digite o Criador" required>
-    </div>
-    <div>
-        <label for ="nome">Digite a EMISSORA do desenho:</label>
-        <input type ="text" name ="emissoras" id="emissoras" placeholder="Digite a Emissora" required>
-    </div>
-    <div>
-        <label for ="nome">Digite o SINOPSE do desenho:</label>
-        <input type ="text" name ="sinopse" id="sinopse" placeholder="Digite a Sinopse" required>
-    </div>
-    <div>
-        <label for ="nome">Coloque endereço da IMAGEM do desenho:</label>
-        <input type ="text" name ="imagem" id="imagem" placeholder="Endereço da Imagem" required>
-    </div>
-    <div>
-        <button type="submit">CRIAR</button>
-    </div>
-</section>
-</body>
+        <script src="/public/js/script.js"></script>
+  </body>
 </html>

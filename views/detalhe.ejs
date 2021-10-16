@@ -4,34 +4,41 @@
   <meta charset="UTF-8">
   <title>Detalhe</title>
 </head>
-<body>
+    <body>
 
-<h2>Detalhe do Desenho<h2>
-    <main id="corpo-detalhe"> 
+        <h2>Detalhe do Desenho<h2>
 
+      <nav>
+        <ul>
+            <li>
+                <a href="/">PAGINA INICIAL</a>
+            </li>
+        </ul>
+      </nav>
+      <main id="corpo-detalhe"> 
         
-        <section class="detalhe-desenho">             
+        <section class="detalhe-desenho">
         
 
-        <ul>       
+            <ul>     
                         
-            <li>Nome:<%= desenho.nome%></li>
-            <li>Ano:<%= desenho.ano%></li> 
+                <li>Nome:<%= catalogo.nome %></li>
+                <li>Ano:<%= catalogo.ano %></li> 
               
-            <li>Personagens:<%= desenho.personagens%></li>
-            <li>Criador:<%= desenho.criador%></li>       
+                <li>Personagens:<%= catalogo.personagens %></li>
+                <li>Criador:<%= catalogo.criador %></li>       
              
-            <li>Emissora:<%= desenho.emissoras%></li>
-            <li>Sinopse:<%= desenho.sinopse%></li>
+                <li>Emissora:<%= catalogo.emissoras %></li>
+                <li>Sinopse:<%= catalogo.sinopse %></li>
 
-            <img src="<%= desenho.imagem%>" width="200" height="300">
-        </ul>           
+                <a href="/"><img src="<%= catalogo.imagem %>" width="200" height="300"></a>
+                <a href="/deletar/<%= catalogo.id %>">DELETAR</a>
+            </ul>           
         
-        </section>
+        </section> 
         
-        <button><a href="/">Voltar</a></button>
-        <a href="/deletar/<%= desenho.id %>">DELETAR</a>
-    </main>
         
-</body>
+      </main>
+        
+    </body>
 </html>

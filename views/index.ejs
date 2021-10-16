@@ -8,37 +8,45 @@
     <title>Catalogo</title>
 </head>
     <body>
-        <h2 id="desenho-antigo">DESENHOS ANTIGOS<h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/criar">Criar Novo Desenho</a>
+                    <a href="/">PAGINA INICIAL</a>
 
-            <main id="corpo-principal">
-            
-               <a href="/criar">Criar Novo Desenho</a>
+                </li>
+            </ul>
+        </nav>
 
-                  <section id = "principal">
-                    <div>
-                        <% catalogo.forEach(function(item) { %>
+        <% if(message != "") {  %>
+            <section id="message">
+                <p><%= message %></p><span id="close">&times;</span>
+            </section>
+        <% }  %>
+
+            <section id="corpo-principal">          
+                <h2 id="desenho-antigo">DESENHOS ANTIGOS<h2>
+                 
+                        <section id = "principal">
+
+                            <% catalogos.forEach(function(item) { %>
 
                         
-                            <div class = "desenho">
-                                <div>                                
-                                    <a href ="/detalhe/<%= item.id%>"><img src="<%= item.imagem%>" alt="imagem dino" width="200" height = "300px"</a>
-                                </div>
-                                
-                                <div>
-                                                                                                                             
-                                    <p>Nome:<%= item.nome %></p>                                    
-                                    <p>Ano:<%= item.ano %></p>
-                                </div>
+                            <article id = "desenho">
+                                <ul>                                
+                                    <a href ="/detalhe/<%= item.id%>"><img src="<%= item.imagem%>" alt="imagem" width="200" height = "300px"</a>                         
+                                                                                                                                                           
+                                    <li>Nome:<%= item.nome %></li>                                    
+                                    <li>Ano:<%= item.ano %></li>                                                                     
+                                </ul>
                                 <a href ="/editar/<%= item.id%>">EDITAR</a>
-                                
-                            </div>
-                        <% }) %>
-                    </div>
+                            </article>
 
-                  </form>
-                  
-                </section>
+                        </section>
+                        <% }) %>                                  
+                
+            </section>
 
-            </main>
+            <script src="/public/js/script.js"></script>
     </body>
 </html>
