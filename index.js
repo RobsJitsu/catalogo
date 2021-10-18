@@ -39,7 +39,7 @@ app.get("/criar", (req, res) =>{
 
 app.post("/criar", async (req, res) => {
   const { nome, imagem, ano, personagens, sinopse, criador, emissoras } = req.body;
-
+  
   if (!imagem) {
     res.render("criar", {
       message: "Imagem obrigatório"
@@ -64,7 +64,7 @@ app.post("/criar", async (req, res) => {
   }
   else if (!criador) {
     res.render("criar", {
-      message: "Sinopse obrigatório"
+      message: "Criador obrigatório"
     });
   }
 
@@ -82,6 +82,7 @@ app.post("/criar", async (req, res) => {
       });
 
       res.redirect("/");
+      
     } catch (err) {
       console.log(err);
       res.render("criar", {
