@@ -19,17 +19,16 @@
     </nav>
 
     <% if(message != "") { %>
-    <section id="message">
+    <section class="message">
         <p><%= message %></p><span id="close">&times;</span>        
     </section>
     <%} %>
 
     <% if(catalogo != null) { %>
-    <section id="edit">   
 
+    <section id="editar-desenho">   
     
-        <form action = "/editar/ <%= catalogo.id %>" method ="POST">
-    
+        <form action = "/editar/ <%= catalogo.id %>" method ="POST">    
     
             <div>
                 <label for ="nome">Digite o NOME do desenho:</label>

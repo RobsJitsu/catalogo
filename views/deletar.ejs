@@ -18,13 +18,14 @@
     </nav>
 
     <% if(message != "") { %>
-        <section id="message">
+        <section class="message">
             <p><%= message %></p><span id="close">&times;</span>
         </section>
     <% } %>
 
     <% if(catalogo != null) { %>
-        <section id="deletar">
+
+        <section id="deletar-desenho">
     
             <form action ="/deletar/<%= catalogo.id %>" method ="POST">    
     

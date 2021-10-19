@@ -10,7 +10,7 @@
 
     <nav>
         <div>
-            <p> Criar Desenho</p>
+            <h3> Criar Desenho</h3>
         </div>
         <div>
             <a href ="/">PAGINA INICIAL</a>
@@ -21,16 +21,16 @@
     </nav>
 
     <% if(message != "") { %>
-        <section id="message">
+        <section class="message">
             <p><%= message %></p><span id="close">&times;</span>
         </section>
     <% } %>
 
     <section>
-
         <form action = "/criar" method ="POST">
     </section>
-        <section>
+
+        <section id="criar-desenho">
             <div>
                 <label for ="nome">Digite o NOME do desenho:</label>
                 <input type ="text" name ="nome" id="nome" placeholder="Digite o Nome" required>
