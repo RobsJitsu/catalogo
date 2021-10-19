@@ -18,31 +18,36 @@
         </nav>
 
         <% if(message != "") {  %>
-            <section class="message">
+            <section id="message">
                 <p><%= message %></p><span id="close">&times;</span>
             </section>
         <% }  %>
 
-            <section id="corpo-principal">          
-                <h2 id="des-principal">DESENHOS ANTIGOS<h2>
-                 
-                        <section class= "principal">
+        <header>
+            <article>
+                <h2>CARTOON BLUE</h2>
+            </article>
+        </header>
+
+            <section id="corpo-principal">
+
+                <h3>DESENHOS ANTIGOS<h3>                      
 
                             <% catalogos.forEach(function(item) { %>
 
-                        
+                        <section class= "principal">
                             <article id = "desenho">
                                 <ul>                                
-                                    <a href ="/detalhe/<%= item.id%>"><img src="<%= item.imagem%>" alt="imagem" width="200" height = "300px"</a>                         
+                                    <a href ="/detalhe/<%= item.id%>"><img src="<%= item.imagem%>" alt="imagem" width="200" height = "300px"</a>                       
                                                                                                                                                            
                                     <li>Nome:<%= item.nome %></li>                                    
                                     <li>Ano:<%= item.ano %></li>                                                                     
                                 </ul>
                                 <a href ="/editar/<%= item.id%>">EDITAR</a>
                             </article>
-
                         </section>
-                        <% }) %>                                  
+
+                        <% }) %>              
                 
             </section>
 

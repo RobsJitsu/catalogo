@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <title>Detalhe</title>
 </head>
-    <body>
-
-        <h3>Detalhe do Desenho<h3>
+    <body>        
 
       <nav>
         <ul>
@@ -15,30 +13,33 @@
                 <a href="/deletar/<%= catalogo.id %>">DELETAR</a>
             </li>
         </ul>
-      </nav>
-      <main id="corpo-detalhe"> 
+      </nav>      
         
-        <section class="detalhe-desenho">        
+        <section id="detalhe-desenho">
+          
+              <h3>Detalhe do Desenho<h3>
 
-            <ul>     
-                        
-                <li>Nome:<%= catalogo.nome %></li>
-                <li>Ano:<%= catalogo.ano %></li> 
-              
-                <li>Personagens:<%= catalogo.personagens %></li>
-                <li>Criador:<%= catalogo.criador %></li>       
-             
-                <li>Emissora:<%= catalogo.emissoras %></li>
-                <li>Sinopse:<%= catalogo.sinopse %></li>
+            <section class="detalhe">
 
-                <a href="/"><img src="<%= catalogo.imagem %>" width="200" height="300"></a>
+                <article id="detal">
+
+                  <ul>     
+                            
+                    <li>Nome:<%= catalogo.nome %></li>
+                    <li>Ano:<%= catalogo.ano %></li> 
+                  
+                    <li>Personagens:<%= catalogo.personagens %></li>
+                    <li>Criador:<%= catalogo.criador %></li>       
                 
-            </ul>           
-        
-        </section> 
-        
-        
-      </main>
+                    <li>Emissora:<%= catalogo.emissoras %></li>
+                    <li>Sinopse:<%= catalogo.sinopse %></li>
+
+                    <a href="/"><img src="<%= catalogo.imagem %>" width="200" height="300"></a>
+                    
+                  </ul>
+                </article>           
+            </section>
+        </section>     
         
     </body>
 </html>

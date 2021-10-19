@@ -8,8 +8,40 @@ html, body {
     scroll-behavior: smooth;
     height: 100vh;
     width: 100%;
-  };
+};
 
+nav {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+};
+
+nav ul {
+    list-style: none;
+    display: flex;
+};
+
+nav ul li {
+    padding: 1rem;
+};
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(68, 105, 255);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.5s;
+};
+
+nav ul li a:hover {
+    color: rgb(255, 68, 230);
+};
+
+  
 section#message {
     padding: 1.5rem;
     background-color: rgb(54,54,54);
@@ -25,9 +57,56 @@ section#message {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  };
+};
 
-  section#corpo-principal section.principal {
+span#close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+};
+
+span#close:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1.5);
+};
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(68, 105, 255);
+    padding: 6rem 3rem 3rem 3rem;
+};
+
+header article h1 {
+    color: #fff;
+    font-size: 5rem;
+    padding: 0 4rem 2rem 4rem;
+};
+  
+header article p {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 4rem;
+};
+
+section#corpo-principal {
+    background-color: rgb(255, 68, 230);
+    padding: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+};
+
+section#detalhe-desenho {
+    background-color: rgb(255, 68, 230);
+    padding: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+};
+
+section#corpo-principal section.principal {
     background-color: #fff;
     padding: 3rem;
     border-radius: 1.5rem;
@@ -36,25 +115,80 @@ section#message {
     justify-content: space-around;
     width: 20%;
     position: relative;
-  };
-  article#title {
+};
+
+section#detalhe-desenho section.detalhe {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    position: relative;
+};
+
+article#title {
     width: 50%;
-  };
+};
   
-  article#title h2 {
+article#title h2 {
     padding: 1.5rem;
-  };
+};
   
-  article#desenho h3 {
+article#detal h3 {
     font-size: 1.5rem;
     padding: 3rem 3rem 1rem 3rem;
-  };
+};
   
-  article#desenho ul {
+article#detal ul {
     list-style: none;
-  };
+};
   
-  article#desenho ul li {
+article#detal ul li {
     padding: 1rem 1rem 1rem 3rem;
     font-size: 1.2rem;
-  };
+};
+
+article#detal a#deletar-desenho {
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(68, 105, 255);
+    color: #fff;
+    border-radius: 3rem;
+    border: 0.2rem solid rgb(255, 238, 0);
+    transition: 0.5s;
+    font-weight: bold;
+    position: absolute;
+    z-index: 10;
+    right: 10rem;
+    top: 32rem;
+};
+
+section#editar-desenho {
+    background-color: rgb(177, 230, 255);
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+};
+
+section#deletar-desenho {
+    background-color: red;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+};
+
+section#deletar-desenho form {
+    width: 50%;
+};
+
+section#criar-desenho form {
+    width: 50%;
+};
+
+
+  

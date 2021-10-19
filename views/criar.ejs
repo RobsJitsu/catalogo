@@ -8,29 +8,26 @@
 </head>
   <body>
 
-    <nav>
-        <div>
+    <nav>      
             <h3> Criar Desenho</h3>
-        </div>
-        <div>
-            <a href ="/">PAGINA INICIAL</a>
-        </div>
-        <div>
-            
-        </div>
+        
+        <ul>
+            <li>
+                <a href ="/">PAGINA INICIAL</a>
+            </li>
+        </ul>        
     </nav>
 
     <% if(message != "") { %>
-        <section class="message">
+        <section id="message">
             <p><%= message %></p><span id="close">&times;</span>
         </section>
     <% } %>
 
-    <section>
-        <form action = "/criar" method ="POST">
-    </section>
+    <section id="criar-desenho">
 
-        <section id="criar-desenho">
+        <form action = "/criar" method ="POST">
+
             <div>
                 <label for ="nome">Digite o NOME do desenho:</label>
                 <input type ="text" name ="nome" id="nome" placeholder="Digite o Nome" required>
@@ -59,12 +56,11 @@
                 <label for ="nome">Coloque endereço da IMAGEM do desenho:</label>
                 <input type ="text" name ="imagem" id="imagem" placeholder="Link da Imagem" required>
             </div>
-            <div>
+            
                 <button type="submit">CRIAR</button>
-            </div>
-        </section>
-    </form>
-
+                       
+        </form>
+    </section>
         <script src="/public/js/script.js"></script>
   </body>
 </html>
