@@ -11,8 +11,10 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/criar">Criar Novo Desenho</a>                    
-
+                    <div id="cabeca_index">
+                    <a href="/criar">Criar Novo Desenho</a>
+                    <a blue=>BLUE Módulo 2</a>                    
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -32,25 +34,25 @@
             <section id="corpo-principal">
 
                 <h3>DESENHOS ANTIGOS<h3>                      
-
                             <% catalogos.forEach(function(item) { %>
-
                         <section class= "principal">
                             <article id = "desenho">
                                 <ul>                                
-                                    <a href ="/detalhe/<%= item.id%>"><img src="<%= item.imagem%>" alt="imagem" width="200" height = "300px"</a>                       
-                                                                                                                                                           
+                                    <a href ="/detalhe/<%= item.id%>"><img src="<%= item.imagem%>" alt="imagem" width="200" height = "300px"</a>                                                                                                                                             
                                     <li>Nome:<%= item.nome %></li>                                    
-                                    <li>Ano:<%= item.ano %></li>                                                                     
+                                    <li>Ano:<%= item.ano %></li>  
+                                    <a href ="/editar/<%= item.id%>">EDITAR</a>                                                                   
                                 </ul>
-                                <a href ="/editar/<%= item.id%>">EDITAR</a>
+                                
                             </article>
                         </section>
 
                         <% }) %>              
                 
             </section>
-
-            <script src="/public/js/script.js"></script>
+                <div id="marca">
+                    <p><mark><strong>Conexão PA-SP / alunos ROB & ALE</strong></mark></p>
+                </div>
+                <script src="/public/js/script.js"></script>
     </body>
 </html>

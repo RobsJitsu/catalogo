@@ -2,44 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css">
   <title>Detalhe</title>
 </head>
     <body>        
-
+      <div id="geral">
       <nav>
         <ul>
             <li>
+              <div id="cabeca_detalhe">
                 <a href="/">PAGINA INICIAL</a>
                 <a href="/deletar/<%= catalogo.id %>">DELETAR</a>
+              </div>
             </li>
         </ul>
-      </nav>      
-        
+      </nav>             
         <section id="detalhe-desenho">
-          
-              <h3>Detalhe do Desenho<h3>
-
             <section class="detalhe">
-
-                <article id="detal">
-
-                  <ul>     
-                            
-                    <li>Nome:<%= catalogo.nome %></li>
-                    <li>Ano:<%= catalogo.ano %></li> 
-                  
-                    <li>Personagens:<%= catalogo.personagens %></li>
-                    <li>Criador:<%= catalogo.criador %></li>       
-                
-                    <li>Emissora:<%= catalogo.emissoras %></li>
-                    <li>Sinopse:<%= catalogo.sinopse %></li>
-
-                    <a href="/"><img src="<%= catalogo.imagem %>" width="200" height="300"></a>
-                    
+              <article id="detal">
+                <ul id="exibir">              
+                  <li>Nome: <%= catalogo.nome %></li>
+                  <li>Ano: <%= catalogo.ano %></li> 
+                  <li>Personagens: <%= catalogo.personagens %></li>
+                  <li>Criador: <%= catalogo.criador %></li>       
+                  <li>Emissora: <%= catalogo.emissoras %></li>
+                  <li>Sinopse: <%= catalogo.sinopse %></li>
+                  <a href="/"><img src="<%= catalogo.imagem %>" width="200" height="300"></a>
                   </ul>
                 </article>           
             </section>
-        </section>     
-        
+        </section> 
+        <div id="base">     
+          <p><mark><strong>DETALHES</strong></mark></p>
+        </div> 
+      </div>   
     </body>
 </html>
