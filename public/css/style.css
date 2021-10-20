@@ -1,194 +1,202 @@
+/* Estilização: Página Index */
 * {
     margin: 0;
     padding: 0;
-    font-family: Helvetica;
-};
-
-html, body {
-    scroll-behavior: smooth;
-    height: 100vh;
-    width: 100%;
-};
-
-nav {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-};
-
-nav ul {
-    list-style: none;
-    display: flex;
-};
-
-nav ul li {
-    padding: 1rem;
-};
-
-nav ul li a {
-    text-decoration: none;
-    color: rgb(68, 105, 255);
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: 0.5s;
-};
-
-nav ul li a:hover {
-    color: rgb(255, 68, 230);
-};
-
+    font-family: Arial, Helvetica, sans-serif;
+  }
   
-section#message {
-    padding: 1.5rem;
-    background-color: rgb(54,54,54);
-    color: (106,90,205);
-    position: fixed;
-    top: 3rem;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 600;  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-};
-
-span#close {
-    font-size: 2rem;
-    cursor: pointer;
-    transition: .3s;
-};
-
-span#close:hover{
-    color: rgb(255, 0, 0);
-    transform: scale(1.5);
-};
-
-header {
+  html,
+  body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+  }
+  
+  nav {
+  background-color: #fff;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  justify-content: space-between
+  }
+  
+  nav ul li {
+  padding: 1rem;
+  }
+  
+  nav ul li a {
+  text-decoration: none;
+  color: rgb(68, 105, 255);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  }
+  
+  header, main {
+  background-color: rgb(88, 103, 240);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6rem 3rem 3rem 3rem;
+  }
+  
+  #cabeca_index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+  
+  h3 {
+    background-color: rgb(193, 250, 241);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(68, 105, 255);
+    padding: 1rem;
+  }
+  
+  #desenho {
+    background-color: rgb(163, 182, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding: 6rem 3rem 3rem 3rem;
-};
-
-header article h1 {
-    color: #fff;
-    font-size: 5rem;
-    padding: 0 4rem 2rem 4rem;
-};
+  }
   
-header article p {
-    color: #fff;
-    font-size: 2rem;
-    padding-left: 4rem;
-};
-
-section#corpo-principal {
-    background-color: rgb(255, 68, 230);
-    padding: 3rem;
+  #marca {
+    background-color: rgb(76, 197, 141);
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-};
-
-section#detalhe-desenho {
-    background-color: rgb(255, 68, 230);
-    padding: 3rem;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-};
-
-section#corpo-principal section.principal {
+    flex-direction: row;
+    justify-content: center;
+    }
+  
+  
+  /* Estilização: Página Detalhes */
+  
+  #geral{
+      margin: 0;
+      padding: 0;
+  }
+  #cabeca_detalhe {
     background-color: #fff;
-    padding: 3rem;
-    border-radius: 1.5rem;
-    margin: 20px;
-    display: flex;
-    justify-content: space-around;
-    width: 20%;
-    position: relative;
-};
-
-section#detalhe-desenho section.detalhe {
-    background-color: #fff;
-    padding: 3rem;
-    border-radius: 1.5rem;
-    margin: 20px;
-    display: flex;
-    justify-content: space-around;
-    width: 20%;
-    position: relative;
-};
-
-article#title {
-    width: 50%;
-};
-  
-article#title h2 {
-    padding: 1.5rem;
-};
-  
-article#detal h3 {
-    font-size: 1.5rem;
-    padding: 3rem 3rem 1rem 3rem;
-};
-  
-article#detal ul {
-    list-style: none;
-};
-  
-article#detal ul li {
-    padding: 1rem 1rem 1rem 3rem;
-    font-size: 1.2rem;
-};
-
-article#detal a#deletar-desenho {
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    background-color: rgb(68, 105, 255);
-    color: #fff;
-    border-radius: 3rem;
-    border: 0.2rem solid rgb(255, 238, 0);
-    transition: 0.5s;
-    font-weight: bold;
-    position: absolute;
+    width: 100%;
     z-index: 10;
-    right: 10rem;
-    top: 32rem;
-};
-
-section#editar-desenho {
-    background-color: rgb(177, 230, 255);
-    padding: 3rem;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-};
-
-section#deletar-desenho {
-    background-color: red;
-    padding: 3rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-};
-
-section#deletar-desenho form {
-    width: 50%;
-};
-
-section#criar-desenho form {
-    width: 50%;
-};
-
-
+    justify-content: space-between;
+    }
   
+  #exibir {
+    background-color: rgb(193, 250, 241);
+    padding: 9rem 3rem 3rem 3rem;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #base {
+    background-color: rgb(76, 197, 141);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Estilização: Página Criar */
+  
+  #geral_criar{
+    margin: 0;
+    padding: 0;
+  }
+  
+  #cabeca_criar{
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    }
+  
+  #criar-desenho{
+    background-color: rgb(193, 250, 241);
+    padding: 9rem 3rem 3rem 3rem;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;  
+  }
+    #base_criar{
+        background-color: rgb(76, 197, 141);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+  
+  /* Estilização: Página Editar */
+  
+  #geral_editar{
+    margin: 0;
+    padding: 0;
+  }
+  
+  #cabeca_editar{
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    }
+  
+  #editar-desenho{
+    background-color: rgb(193, 250, 241);
+    padding: 9rem 3rem 3rem 3rem;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;  
+  }
+    #base_editar{
+        background-color: rgb(76, 197, 141);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+  
+      /* Estilização: Página Deletar */
+  
+      #geral_del{
+        margin: 0;
+        padding: 0;
+      }
+      
+      #cabeca_deletar{
+        background-color: #fff;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        }
+      
+      #deletar-desenho{
+        background-color: rgb(193, 250, 241);
+        padding: 9rem 3rem 3rem 3rem;
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;  
+      }
+      
+        #base_deletar{
+            background-color: rgb(76, 197, 141);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+   
