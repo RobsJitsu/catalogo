@@ -1,5 +1,6 @@
 /* Estilização: Página Index */
 * {
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -199,3 +200,205 @@ justify-content: center;
 font-weight: bold;
 font-size: 1.2rem;
 }
+=======
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  html,
+  body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+  }
+  
+  nav {
+  background-color: #fff;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  justify-content: space-between
+  }
+  
+  nav ul li {
+  padding: 1rem;
+  }
+  
+  nav ul li a {
+  text-decoration: none;
+  color: rgb(68, 105, 255);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  }
+  
+  header, main {
+  background-color: rgb(88, 103, 240);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6rem 3rem 3rem 3rem;
+  }
+  
+  #cabeca_index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+  
+  h3 {
+    background-color: rgb(193, 250, 241);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  #desenho {
+    background-color: rgb(163, 182, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6rem 3rem 3rem 3rem;
+  }
+  
+  #marca {
+    background-color: rgb(76, 197, 141);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+  
+  
+  /* Estilização: Página Detalhes */
+  
+  #geral{
+      margin: 0;
+      padding: 0;
+  }
+  #cabeca_detalhe {
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    }
+  
+  #exibir {
+    background-color: rgb(193, 250, 241);
+    padding: 9rem 3rem 3rem 3rem;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #base {
+    background-color: rgb(76, 197, 141);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Estilização: Página Criar */
+  
+  #geral_criar{
+    margin: 0;
+    padding: 0;
+  }
+  
+  #cabeca_criar{
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    }
+  
+  #criar-desenho{
+    background-color: rgb(193, 250, 241);
+    padding: 9rem 3rem 3rem 3rem;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;  
+  }
+    #base_criar{
+        background-color: rgb(76, 197, 141);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+  
+  /* Estilização: Página Editar */
+  
+  #geral_editar{
+    margin: 0;
+    padding: 0;
+  }
+  
+  #cabeca_editar{
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    }
+  
+  #editar-desenho{
+    background-color: rgb(193, 250, 241);
+    padding: 9rem 3rem 3rem 3rem;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;  
+  }
+    #base_editar{
+        background-color: rgb(76, 197, 141);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+  
+      /* Estilização: Página Deletar */
+  
+      #geral_del{
+        margin: 0;
+        padding: 0;
+      }
+      
+      #cabeca_deletar{
+        background-color: #fff;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        }
+      
+      #deletar-desenho{
+        background-color: rgb(193, 250, 241);
+        padding: 9rem 3rem 3rem 3rem;
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;  
+      }
+      
+        #base_deletar{
+            background-color: rgb(76, 197, 141);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+   
+>>>>>>> f167db23d67e2b3695372867253404854e77e27e
